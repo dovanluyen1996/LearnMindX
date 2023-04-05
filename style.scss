@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+}
+// ------ Header -------
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  background-color: aquamarine;
+  .title {
+    padding-left: 20px;
+    font-weight: 600;
+  }
+  .menu {
+    display: contents;
+    ul {
+      list-style: none;
+    }
+    li {
+      display: block;
+      float: left;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}
+// ------End Header -------
+
+// ------Main -------
+.box-show {
+  width: 100%;
+  display: flex;
+  .box-search {
+    width: 30%;
+    background-color: #ccc;
+    .search {
+        text-align: center;
+        input {
+          width: 80%;
+          height: 35px;
+          margin: 15px;
+          border-radius: 15px;
+          border: 1px solid #ccc;
+          padding-left: 10px;
+        }
+        .btn-search {
+          padding: 6px 16px;
+          border: none;
+          border-radius: 12px;
+          background: greenyellow;
+          box-shadow: 0px 3px 2px 0px #999999;
+        }
+      }
+  }
+  .box-product {
+    width: 70%;
+    height: auto;
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    // grid-gap: 40px;
+    .item {
+      width: 100%;
+      height: 220px;
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 15px;
+      .image {
+        width: 100%;
+        height: 70%;
+        background-color: yellow;
+        .hambuger {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .price {
+        height: 30%;
+        .title {
+          display: inline-block;
+          font-weight: 600;
+          padding: 10px;
+        }
+
+        .text-price {
+          display: inline-block;
+          padding-left: 10px;
+          color: red;
+        }
+      }
+    }
+  }
+}
+// ------End Main -------
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  background-color: #999999;
+}
+
+// Responsive
+@media only screen and (min-width: 900px) {
+  .box-product {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .box-product {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .box-product {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
