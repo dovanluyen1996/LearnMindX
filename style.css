@@ -127,24 +127,20 @@ main {
   background-color: #999999;
 }
 
-/* Responsive */
 @media only screen and (min-width: 900px) {
-  .content-menu {
-    display: block;
-  }
   .box-product {
     grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 @media only screen and (max-width: 768px) {
-  .content-menu {
-    display: block;
-  }
   .box-product {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 @media only screen and (max-width: 600px) {
+  main {
+    margin: 10px;
+  }
   .header {
     display: grid;
     justify-content: inherit;
